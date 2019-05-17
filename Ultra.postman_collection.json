@@ -1,0 +1,361 @@
+{
+	"info": {
+		"_postman_id": "7f637ac3-8c7c-4492-a783-ecdc64bdd2a6",
+		"name": "Ultra",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Publisher",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "EagleSoft",
+							"type": "text"
+						},
+						{
+							"key": "siret",
+							"value": "6772",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "03335362999",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/publisher",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"publisher"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "crash",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete publisher",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:3000/publisher/Ubisoft",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"publisher",
+						"Ubisoft"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "crash",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get list of publishers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/publishers/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"publishers",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Publisher",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Capcom",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+19998334",
+							"type": "text"
+						},
+						{
+							"key": "siret",
+							"value": "985",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/publisher/capcom",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"publisher",
+						"capcom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Game",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\":\"God of war\",\n\"price\":200,\n\"publisher\":\"Capcom\",\n\"tags\":[\"Fighting\",\"Action\",\"Adventure\"],\n\"release_date\":\"2017-12-10\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/game",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"game"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All games",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/games",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"games"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get game by name&pub",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/game/God of war/Capcom",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"God of war",
+						"Capcom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get game publisher",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/game/p/publisher/God of war",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"p",
+						"publisher",
+						"God of war"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Game pruning",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/game/prune",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"prune"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Game",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:3000/game/God of war/Capcom",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"God of war",
+						"Capcom"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Game by name",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"title\":\"Heart of darkness\",\n\"price\":200,\n\"publisher\":\"Ubisoft\",\n\"tags\":[\"Fighting\",\"Action\",\"Adventure\"],\n\"release_date\":\"2009-12-10\"\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:3000/game/Heart of darkness",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "3000",
+					"path": [
+						"game",
+						"Heart of darkness"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
